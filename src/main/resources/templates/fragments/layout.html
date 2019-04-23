@@ -1,0 +1,35 @@
+<!doctype html>
+<html th:fragment="layout (template, menu)">
+<head>
+    <title>SpringCalculator</title>
+    <link rel="stylesheet" type="text/css" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/main.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">SpringCalculator</a>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/calcul">Calcul</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div th:replace="${template}"/>
+
+    <div class="container-fluid bg-light px-0 py-5">
+        <footer class="text-muted">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>Calculator example is © Benjamin Oliveira</p>
+                <p>My portfolio <a href="https://benjamin-oliveira.fr/">Oliveira Benjamin</a> or code on <a href="https://github.com/manipovore">Github</a>.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/js/calculatrice.js"></script>
+</body>

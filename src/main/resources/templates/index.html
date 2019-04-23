@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'index')}">
+
+<body>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <a href="/" class="lang-logo">
+      <img src="/lang-logo.png">
+    </a>
+    <h1>Utiliser la calculatrice en ligne </h1>
+    <p>SpringCalculator est une application Java (framework spring-boot) déployé sur Heroku. C'est une application assez simple, mais une bonne base pour démontrer mon savoir-faire.</p>
+    <a type="button" class="btn btn-lg btn-default" href="/calcul"> Calculatrice</a>
+    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/manipovore">Source on GitHub</a>
+  </div>
+</div>
+<div class="container">
+  <h1 class="blockquote pt-4">Calculatrice en ligne</h1>
+  <p class="text-muted">Crée le 19/04/2019</p>
+  <div class="jumbotron">
+    <h2>Projet arthimétique simple codé en Java EE</h2>
+    <p>L'algorithme du projet permet de récupérer
+      une chaine de caractère, il analyse et traite en interne cette
+      "String" de façon à renvoyer le résultat (Double|BigDecimal) après
+      un processus d'opération arithmétique simple basé sur les opérateurs
+      + - * / %.</p>
+    <p>Aussi, le coeur du processus prend en compte tous les nombres
+      entiers, décimaux, naturels et relatifs. Le principe de priorité est respectée.</p>
+    <h2>Technique <small>Technologie utilisée</small></h2>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Java SE | Java EE -> Coeur du système | MVC</li>
+      <li class="list-group-item">JS -> Simplement, affiche une calculatrice en lien avec le
+        formulaire java</li>
+      <li class="list-group-item">POO</li>
+      <li class="list-group-item">RegEx</li>
+      <li class="list-group-item">Css/Bootstrap</li>
+      <li class="list-group-item">HTML5</li>
+    </ul>
+    <h2>Timelapse</h2>
+    <p>Temps de codage:</p>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Tdd: <span class="badge badge-primary badge-pill">1j</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        Algorithme/tests:
+        <span class="badge badge-primary badge-pill">3j</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Refactoring: <span class="badge badge-primary badge-pill">4h</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Design sommaire: <span class="badge badge-primary badge-pill">2h</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Prépa production: <span class="badge badge-primary badge-pill">1h</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Test: <span class="badge badge-primary badge-pill">1h</span></li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">Mise en prod: <span class="badge badge-primary badge-pill">1h</span></li>
+    </ul>
+    <blockquote class="blockquote text-center">
+      <p class="mb-0">No java expert, a lot of time in the doc.</p>
+      <footer class="blockquote-footer">
+        but passion allows me to excel <cite title="Source Title">;)</cite>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+</body>
+</html>
