@@ -17,7 +17,7 @@ public class Operation {
 	private String regexNb = "N|(\\d+(\\.\\d+)?)";
 	private String[] splitOperators = {};
     
-	private String regexOperator = "(\\+|\\*|\\%|\\/|\\-)";
+	private String regexOperator = "(\\+|\\*|\\×|\\%|\\/|\\÷|\\-)";
 	private String[] splitNumbers = {};
     
     public Double resultOperation = 0.0;
@@ -45,7 +45,7 @@ public class Operation {
 	 */
 	private String refactorNegativeNumbers(String input) {
 		try {
-	        input = input.replaceAll("(\\+|\\*|\\%|\\/|\\-)(\\-)", "$1N");
+	        input = input.replaceAll("(\\+|\\*|\\×|\\%|\\/|\\÷|\\-)(\\-)", "$1N");
 	        input = input.replaceAll("^(\\-)(\\d+)", "N$2");
 	        input = input.replaceAll("(\\s)", "");
 		}catch(NumberFormatException e) {
@@ -87,12 +87,22 @@ public class Operation {
 	
 	/**
 	 * Add the elements of the array to a list
+	 * Converting operator
 	 */
 	private void addOperatorInList() {
         for(String string : splitOperators) {
         	if(!string.isEmpty()) {
-        		System.out.println("operator: " + string);
-              	this.operators.add(string);
+				try {
+					if(string.contains("×")) {
+						string = string.replaceAll("×", "*");
+					}else if(string.contains("÷")){
+						string = string.replaceAll("÷", "/");
+					}
+					System.out.println("operator: " + string);
+					this.operators.add(string);
+				}catch(NumberFormatException e) {
+					System.out.println("Error: operation.java add operator in List");
+				}
         	}
         }
 	}

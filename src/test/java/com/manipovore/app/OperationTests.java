@@ -18,8 +18,6 @@ public class OperationTests {
 	public void contextLoads() {
 	}
 
-	Operation goodAdditionTwo = new Operation("1+1");
-
 	@Test
 	public void test() {
 		//fail("Not yet implemented");
@@ -58,6 +56,17 @@ public class OperationTests {
 	@Test
 	public void should_GoodOperationWith_Modulo() {
 		assertEquals(new BigDecimal(2), new Operation("8%3").getResult());
+	}
+
+
+	@Test
+	public void should_GoodConvertOperator_Divide() {
+		assertEquals(new BigDecimal(2), new Operation("8÷4").getResult());
+	}
+
+	@Test
+	public void should_GoodConvertOperator_Multiplic() {
+		assertEquals(new BigDecimal(4), new Operation("2×2").getResult());
 	}
 
 	@Test

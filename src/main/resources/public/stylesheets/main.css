@@ -121,3 +121,18 @@ form .requis {
     background-color: #0000004f;
     margin-bottom: 2px;
 }
+
+@media (max-width: 768px){
+    .container {
+        max-width: 100%;
+    }
+    .calculatrice{
+        width: 100%;
+    }
+}
+
+@media (max-width: 546px){
+    .container {
+        width: 100%;
+    }
+}
