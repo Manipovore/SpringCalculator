@@ -1,6 +1,6 @@
 # SpringCalculator
 
-SpringCalculator est une application Java (framework spring-boot) déployé sur Heroku qui permet d'effectuer les calculs de base.
+SpringCalculator est une application Java (framework spring-boot) déployée sur Heroku, permettant d'effectuer les calculs de base.
  C'est une application assez simple, mais une bonne base pour démontrer un savoir-faire.
  
 L'algorithme du projet permet de récupérer
